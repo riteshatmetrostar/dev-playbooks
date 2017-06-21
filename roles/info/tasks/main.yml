@@ -1,6 +1,6 @@
 ---
 - name: print playbook info
-  command: ./info.py {{version}} {{author}}
+  shell: ./info.py {{version}} {{author}}
   args:
     chdir: "{{role_path}}/files"
   register: response
