@@ -1,0 +1,6 @@
+---
+- name: print playbook info
+  command: ./roles/info/files/info.py {{version}} {{author}}
+  register: response
+- debug: msg="{{response.stdout}}"
+  delegate_to: localhost
