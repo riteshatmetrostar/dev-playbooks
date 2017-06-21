@@ -1,8 +1,6 @@
 ---
 - name: print playbook info
-  command: ./info.py {{version}} {{author}}
-  args:
-    chdir: roles/info/files
+  script: ./roles/info/files/info.py {{version}} {{author}}
   register: response
 - debug: msg="{{response.stdout}}"
   delegate_to: localhost
